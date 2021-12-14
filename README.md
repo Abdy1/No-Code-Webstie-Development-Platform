@@ -1,0 +1,2 @@
+# No-Code-Webstie-Development-Platform
+Our system asks a users what kind of website he want to make. Gather some information and then prepare some structure. It also give them suggestion according to their preference. The system asks user series of question throughout the design progress. There are also some prompts user can make to get some action like getting some helps or go to generated codes to make modifications just in case user have coding experience. 

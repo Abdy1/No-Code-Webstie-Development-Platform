@@ -15,6 +15,7 @@
   var headerBackgroundColor = "#f1f1f1;"
   var headerPadding = "20px 10px"
   var trackheader = 0;
+  
   //tracks the state of the program. if 0 its outside ready to add new component
   var trackstate = 0;
   css.value+= "body {\n  margin: 0px;\n }\n\n";

@@ -13,3 +13,4 @@ get rid of this instead let css duplicate because we can't be sure weather those
 there are many stages stages when new element is created stage when component is edited. 0 if user input is used to create new element 1 to ediit it etc
 
 https://developer.mozilla.org/en-US/docs/Web/API/Document/write
+

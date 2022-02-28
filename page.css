@@ -1,128 +1,120 @@
-body{
-    margin:0px;
-    padding:0px;
-  
-    font-family:"Raleway";
-  }
-  .container{
-    height:100vh;
-    display:grid;
-    grid-template-columns:25% 75%;
-    grid-template-rows:10% 95%;
-    grid-template-areas:"b a" "b c";
-   
-    
-  }
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Raleway";
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 10% 95%;
+  grid-template-areas: "b a" "b c";
+}
 
-    .top{
-      grid-column:1 ,2;
-      overflow: auto;
-      grid-area:a;
-    }
-    .side{
-    
-      grid-area:b;
-      background-color:#ccc;
-    }
-    .body{
-      grid-area:c;
-    }
-    .categories {
-      padding: 1rem 2rem;
-     
-    }
-    .category-section {
-      display: flex;
-      
-    }
-    .category {
-      margin-right: 1rem;
-      word-wrap: none;
-      white-space: nowrap;
-      border: 1px solid #ccc;
-      border-radius: 980px;
-      background-color: #e7e7e7;
-      padding: 0.5rem 1rem;
-      font-size: inherit;
-      cursor: pointer;
-      transition: background-color 150ms;
-     
-    }
-    .category:hover {
-      background-color: #ddd;
-    }
-    .category.active {
-      background-color: #606060;
-      color: white;
-      border-color: #eee;
-    }
-    .category:last-child {
-      margin-right: 0;
-    }
-  
-    .tabs{
-      width:inherit;
-      height: 100vh;
-      background:#f5f5f5;
-      padding:20px 30px;
-      overflow:hidden;
-    }
-    .tabs .tab-header{
-      height:60px;
-      display:flex;
-      align-items:center;
-    }
-    .tabs .tab-header > div{
-      width:calc(100%/4);
-      text-align:center;
-      color:#888;
-      font-weight:600;
-      cursor:pointer;
-      font-size:14px;
-      text-transform:uppercase;
-      outline:none;
-    }
-    .tabs .tab-header > div > i {
-      display:block;
-      margin-bottom:5px;
-    }
-    .tabs .tab-header > div.active {
-      color:#00acee;
-    }
-    .tabs .tab-indicator {
-      position:relative;
-      width:calc(100%/4);
-      height:5px;
-      background:#00acee;
-      left:0px;
-      border-radius:5px; 
-    }
-    .tabs .tab-body{
-      position:relative;
-      height:calc(100% - 60px);
-      padding:10px 5px;
-    }
-    .tabs .tab-body>div {
-      position:absolute;
-      top: -200px;
-      opacity: 0;
-      margin-top: 5px;
-      transform: scale(0.9);
-      transition: opacity 500ms ease-in-out 0ms,
-      transform 500ms ease-in-out0ms;
-    }
-    .tabs .tab-body > div.active {
-      top: 0px;
-      opacity: 1;
-      transform: scale(1);
-      margin-top: 0px;
-    }
-    
-    textarea {
+.top {
+  grid-column: 1, 2;
+  overflow: auto;
+  grid-area: a;
+}
+.side {
+  grid-area: b;
+  background-color: #ccc;
+}
+.body {
+  grid-area: c;
+}
+.categories {
+  padding: 1rem 2rem;
+}
+.category-section {
+  display: flex;
+}
+.category {
+  margin-right: 1rem;
+  word-wrap: none;
+  white-space: nowrap;
+  border: 1px solid #ccc;
+  border-radius: 980px;
+  background-color: #e7e7e7;
+  padding: 0.5rem 1rem;
+  font-size: inherit;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+.category:hover {
+  background-color: #ddd;
+}
+.category.active {
+  background-color: #606060;
+  color: white;
+  border-color: #eee;
+}
+.category:last-child {
+  margin-right: 0;
+}
+
+.tabs {
+  width: inherit;
+  height: 100vh;
+  background: #f5f5f5;
+  padding: 20px 30px;
+  overflow: hidden;
+}
+.tabs .tab-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.tabs .tab-header > div {
+  width: calc(100% / 4);
+  text-align: center;
+  color: #888;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+}
+.tabs .tab-header > div > i {
+  display: block;
+  margin-bottom: 5px;
+}
+.tabs .tab-header > div.active {
+  color: #00acee;
+}
+.tabs .tab-indicator {
+  position: relative;
+  width: calc(100% / 4);
+  height: 5px;
+  background: #00acee;
+  left: 0px;
+  border-radius: 5px;
+}
+.tabs .tab-body {
+  position: relative;
+  height: calc(100% - 60px);
+  padding: 10px 5px;
+}
+.tabs .tab-body > div {
+  position: absolute;
+  top: -200px;
+  opacity: 0;
+  margin-top: 5px;
+  transform: scale(0.9);
+  transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out0ms;
+}
+.tabs .tab-body > div.active {
+  top: 0px;
+  opacity: 1;
+  transform: scale(1);
+  margin-top: 0px;
+}
+
+textarea {
   width: 100%;
   min-height: 250px;
   overflow: scroll;
-  
+
   background: #f4f4f9;
   outline: none;
   font-family: Courier, sans-serif;
@@ -134,4 +126,9 @@ iframe {
   position: relative;
   width: 100%;
   height: 100vh;
+}
+
+
+input {
+  margin-top: 100px;
 }

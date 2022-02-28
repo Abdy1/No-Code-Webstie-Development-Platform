@@ -17,7 +17,16 @@
   var trackheader = 0;
   //tracks the state of the program. if 0 its outside ready to add new component
   var trackstate = 0;
+  css.value+= "body {\n  margin: 0px;\n }\n\n";
+ 
 
+//think how to use to implement links without traditional html way
+//  <script>
+// function doSomething() {
+//   alert("hello")
+// }
+// </script>
+// <a href="javascript:doSomething();">click me</a>
 
   function commit(){
     code.open();

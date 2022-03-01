@@ -11,6 +11,7 @@ to make sure that css code is not duplicated we have boolean variable. if alread
 get rid of this instead let css duplicate because we can't be sure weather those duplicates value are the same. instead let them duplicate but when the project is about to be exported compare those and if identical get rid of one of them.
 
 there are many stages stages when new element is created stage when component is edited. 0 if user input is used to create new element 1 to ediit it etc
+check and if the states is 0 go through switch cases of element names.
+once it enter state is changed into 1
 
-https://developer.mozilla.org/en-US/docs/Web/API/Document/write
-
+i used technique of form submit .there is input type of text. its value is known after submit is pressed. 

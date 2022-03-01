@@ -48,15 +48,15 @@
 function letsGo(event){
   var userinput = document.getElementById("myInput").value;
 
-  console.log(trackstate + "is the value of state if 0 its outside");
+  console.log( "current state"  + trackstate);
 
   //make sure state is 0 before creating new element
   if (trackstate == 0) {
-    console.log("i entered the if statement");
+    console.log("i entered the if statement since state is 0");
+    trackstate = 1;
   switch(userinput) {
-    case "header":
-      trackstate = 1;
-      console.log("now state is " + trackstate);
+    case "header": 
+      console.log( "now i am going to generate code for header then change my state to"+ trackstate  );
       trackheader = trackheader + 1;
       html.value += "\n<!--headerone"+trackheader+"-->\n\n<div class=\"header\">\n <a href=\"#default\" class=\"logo\"> CompanyLogo </a>\n <div class=\"header-right\">\n  <a class=\"active\" href=\"#home\">Home</a>\n  <a href=\"#contact\">Contact</a>\n  <a href=\"#about\">About</a>\n </div>\n</div>\n\n<!--headerone"+trackheader+"closed-->\n\n";
       if(DidCssHappenedHeader == 0){
@@ -64,9 +64,10 @@ function letsGo(event){
       css.value += ".header{\n   overflow: hidden;\n   background-color:" + headerBackgroundColor + "\n   padding: 20px 10px;\n}\n.header a {\n   float: left;\n   color: black;\n   text-align: center;\n   padding: 12px;\n   text-decoration: none;\n   font-size: 18px;\n   line-height: 25px;\n   border-radius: 4px;\n}\n.header a.logo {\n   font-size: 25px;\n   font-weight: bold;\n}\n.header a:hover {\n   background-color: #ddd;\n   color: black;\n}\n.header a.active {\n   background-color: dodgerblue;\n   color: white;\n}\n.header-right {\n   float: right;\n}\n@media screen and (max-width: 500px) {\n.header a {\n   float: none;\n   display: block;\n   text-align: left;\n}\n.header-right {\n   float: none;\n}\n}\n";
       DidCssHappenedHeader = 1;
       promptone.innerHTML = "what do you want the background color to be";
-      console.log(headerBackgroundColor);
-      headerBackgroundColor = userinput;
-      console.log(headerBackgroundColor);
+      console.log("just so you know the value of headerBackgroundColor is" + headerBackgroundColor);
+     // console.log(headerBackgroundColor);
+    //  headerBackgroundColor = userinput;
+   // console.log(headerBackgroundColor);
     }
     commit();
       break;
@@ -77,20 +78,22 @@ function letsGo(event){
       break;
     default:
   }}
-
+   console.log(" there is if statement im sure i will enter since by now my state is 1");
   //if state is 1 we know we are in header. so we let the user make modification of header
   if (trackstate == 1) {
-    console.log("i entered the if statement");
+    console.log("yeeee i entered the second if statement which is more specific because state is" + trackstate);
   switch(userinput) {
     case "red":
+      console.log("user typed " + userinput);
       console.log(headerBackgroundColor);
-      headerBackgroundColor = userinput;
+      headerBackgroundColor = "red";
       console.log(headerBackgroundColor);
+  
     
     commit();
     break;
-    case "OTHER":
-      html.value += "<h1> YOU </h1>";
+    case "header":
+      console.log("im here");
   
       commit();     
       break;

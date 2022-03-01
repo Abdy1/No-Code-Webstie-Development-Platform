@@ -101,7 +101,7 @@ function letsGo(event){
     default:
   }}
 
-  event.preventDefault();
+  
 }
 btn.addEventListener('click', letsGo);
 

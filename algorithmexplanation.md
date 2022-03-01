@@ -14,4 +14,4 @@ there are many stages stages when new element is created stage when component is
 check and if the states is 0 go through switch cases of element names.
 once it enter state is changed into 1
 
-i used technique of form submit .there is input type of text. its value is known after submit is pressed. 
+

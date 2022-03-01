@@ -8,6 +8,7 @@
   var code = document.getElementById("code").contentWindow.document;
   var promptone = document.getElementById("promptone");
   var form = document.getElementById("form");
+  var btn = document.getElementById("btn");
 
   var DidCssHappenedHeader = 0;
 
@@ -102,8 +103,9 @@ function letsGo(event){
 
   event.preventDefault();
 }
-form.addEventListener('submit', letsGo);
-  document.body.onkeyup = function() {
+btn.addEventListener('click', letsGo);
+
+ document.body.onkeyup = function() {
      commit();
   };
 

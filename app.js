@@ -9,16 +9,18 @@
   var promptone = document.getElementById("promptone");
   var form = document.getElementById("form");
   var btn = document.getElementById("btn");
-
   var DidCssHappenedHeader = 0;
+
 
   //CSS properties for css
   var headerBackgroundColor = "#f1f1f1;"
   var headerPadding = "20px 10px"
   var trackheader = 0;
   
+
+
   //tracks the state of the program. if 0 its outside ready to add new component
-  var trackstate = 0;
+  
   css.value+= "body {\n  margin: 0px;\n }\n\n";
  
 
@@ -43,18 +45,21 @@
     );
     code.close();
   }
-  promptone.innerHTML = "What is the content you want to add";
+
+ promptone.innerHTML = "What is the content you want to add";
  
 
 function letsGo(event){
   var userinput = document.getElementById("myInput").value;
-
+  //var crosscheck = 0;
+  var trackstate = 0;
   console.log( "current state"  + trackstate);
 
   //make sure state is 0 before creating new element
   if (trackstate == 0) {
     console.log("i entered the if statement since state is 0");
-    trackstate = 1;
+    
+    //crosscheck = 1;
   switch(userinput) {
     case "header": 
       console.log( "now i am going to generate code for header then change my state to"+ trackstate  );
@@ -71,16 +76,18 @@ function letsGo(event){
    // console.log(headerBackgroundColor);
     }
     commit();
+    
       break;
-    case "OTHER":
+    case "red":
       html.value += "<h1> YOU </h1>";
   
       commit();     
       break;
-    default:
+   
   }}
    console.log(" there is if statement im sure i will enter since by now my state is 1");
   //if state is 1 we know we are in header. so we let the user make modification of header
+  trackstate = 1;
   if (trackstate == 1) {
     console.log("yeeee i entered the second if statement which is more specific because state is" + trackstate);
   switch(userinput) {
@@ -88,17 +95,18 @@ function letsGo(event){
       console.log("user typed " + userinput);
       console.log(headerBackgroundColor);
       headerBackgroundColor = "red";
-      console.log(headerBackgroundColor);
+      console.log(headerBackgroundColor + "izi ga negn");
+      //use replacing
   
     
     commit();
     break;
     case "header":
       console.log("im here");
-  
+      console.log(userinput);
       commit();     
       break;
-    default:
+   
   }}
 
   
@@ -109,7 +117,7 @@ btn.addEventListener('click', letsGo);
      commit();
   };
 
- 
+ const person = {age:21,behavior:{name:"neutral", action(){console.log("i am" + this.name);}},greet(){console.log("hello i am" + this.age )}};
 
 
 
